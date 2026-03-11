@@ -1,0 +1,44 @@
+data_formats:
+  - asc
+  - csv
+  - csvp
+  - csv0
+  - dods
+  - esriAscii
+  - itx
+  - json
+  - jsonlCSV1
+  - jsonlCSV
+  - jsonlKVP
+  - mat
+  - nc
+  - nccsv
+  - ncoJson
+  - odvTxt
+  - parquet
+  - parquetWMeta
+  - tsv
+  - tsvp
+  - tsv0
+  - wav
+  - geotif
+  - kml
+  - smallPdf
+  - pdf
+  - largePdf
+  - smallPng
+  - png
+  - largePng
+  - transparentPng
+
+system_endpoints:
+  - index
+  - documentation
+  - search
+  - categorize
+  - files
+  - status
+  - version
+  - download
+  - info
+  - rss

@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simple-erddap-metrics"
+version = "0.1.0"
+description = "Simple dashboard to visualize ERDDAP usage metrics from log files"
+readme = "README.md"
+requires-python = ">=3.9"
+
+authors = [
+    { name = "Emmanuel Romero" }
+]
+
+license = { text = "MIT" }
+
+keywords = [
+    "erddap",
+    "oceanography",
+    "metrics",
+    "dashboard",
+    "streamlit"
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "pandas",
+    "streamlit",
+    "altair",
+    "folium",
+    "streamlit-folium",
+    "requests"
+]
+
+[project.urls]
+Homepage = "https://github.com/romeroqe/simple-erddap-metrics"
+Source = "https://github.com/romeroqe/simple-erddap-metrics"
+Issues = "https://github.com/romeroqe/simple-erddap-metrics/issues"
+
+[project.scripts]
+simple-erddap-metrics = "simple_erddap_metrics.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["simple_erddap_metrics*"]
+
+[tool.setuptools]
+include-package-data = true

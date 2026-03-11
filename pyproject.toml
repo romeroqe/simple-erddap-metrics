@@ -38,7 +38,8 @@ dependencies = [
     "altair",
     "folium",
     "streamlit-folium",
-    "requests"
+    "requests",
+    "PyYAML"
 ]
 
 [project.urls]

@@ -62,24 +62,33 @@ def main():
         return
 
     # STREAMLIT MODE
-    root = pathlib.Path(__file__).resolve().parents[1]
-    app_path = root / "app" / "streamlit_app.py"
+    app_path = pathlib.Path(__file__).parent / "streamlit_app.py"
 
     if not app_path.exists():
         print(f"Streamlit app not found: {app_path}")
         sys.exit(1)
 
-    subprocess.run(
-        [
-            "streamlit",
-            "run",
-            str(app_path),
-            "--",
-            "--logs",
-            args.logs if args.logs else "",
-            "--config",
-            args.config if args.config else "",
-            "--enable-geo" if args.enable_geo else ""
-        ],
-        check=True
-    )
+    cmd = [
+        sys.executable,
+        "-m",
+        "streamlit",
+        "run",
+        str(app_path),
+    ]
+
+    # argumentos para la app
+    app_args = []
+
+    if args.logs:
+        app_args += ["--logs", args.logs]
+
+    if args.config:
+        app_args += ["--config", args.config]
+
+    if args.enable_geo:
+        app_args += ["--enable-geo"]
+
+    if app_args:
+        cmd += ["--"] + app_args
+
+    subprocess.run(cmd, check=True)

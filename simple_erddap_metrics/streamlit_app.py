@@ -2,10 +2,10 @@ import argparse
 import streamlit as st
 import pandas as pd
 
-from cards import metric_card, inject_card_css
-from data_loader import load_logs
-from charts import *
-from map_view import render_download_map
+from simple_erddap_metrics.cards import metric_card, inject_card_css
+from simple_erddap_metrics.data_loader import load_logs
+from simple_erddap_metrics.charts import *
+from simple_erddap_metrics.map_view import render_download_map
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--logs")
@@ -45,7 +45,7 @@ with st.expander("⚙ Advanced configuration", expanded=False):
         help="Optional YAML file. If left empty, the default configuration will be used."
     )
 
-    config_path = config_path.strip() or None
+    config_path = config_path.strip() if isinstance(config_path, str) else None
 
     geolocate = st.toggle(
         "Enable IP geolocation",

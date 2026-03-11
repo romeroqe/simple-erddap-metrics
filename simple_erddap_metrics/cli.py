@@ -76,7 +76,6 @@ def main():
         str(app_path),
     ]
 
-    # argumentos para la app
     app_args = []
 
     if args.logs:

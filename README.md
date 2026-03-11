@@ -1,4 +1,7 @@
 # Simple ERDDAP Metrics
+<a href="https://github.com/romeroqe/simple-erddap-metrics"><img src="https://shields.io/github/v/release/romeroqe/simple-erddap-metrics" alt="Release"></a>
+<a href="https://pypi.org/project/simple-erddap-metrics/"><img src="https://img.shields.io/pypi/v/simple-erddap-metrics" alt="PyPI Version"></a>
+<a href="https://github.com/romeroqe/simple-erddap-metrics/blob/main/LICENSE"><img src="https://shields.io/github/license/romeroqe/simple-erddap-metrics" alt="License"></a>
 
 Simple ERDDAP Metrics is a lightweight tool to analyze ERDDAP server log files and visualize usage metrics through an interactive dashboard or export the parsed data as CSV.
 
